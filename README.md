@@ -1,6 +1,6 @@
 # PHPFastCGI Zend Framework 2 Adapter
 
-
+Experemental
 
 ## Introduction
 
