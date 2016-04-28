@@ -11,11 +11,11 @@
         }
     ],
     "require": {
-	    "php": ">=5.5",
+	"php": ">=5.5",
         "zendframework/zendframework": "~2.4",
-		"phpfastcgi/fastcgi-daemon": "^0.8",
-		"zf-commons/zfc-user-doctrine-orm": "dev-master",
-        "paragonie/random_compat": "stable"
+	"phpfastcgi/fastcgi-daemon": "^0.8",
+	"zf-commons/zfc-user-doctrine-orm": "dev-master",
+        "paragonie/random_compat": "dev-master"
 	},
     "autoload": {
         "psr-4": {
