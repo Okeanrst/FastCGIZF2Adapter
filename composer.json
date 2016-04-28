@@ -3,6 +3,7 @@
     "description": "A PHPFastCGI adapter for the Zend Framework 2",
     "keywords": ["zf2", "fastcgi", "server", "fast cgi", "daemon"],
     "license": "MIT",
+    "homepage": "https://github.com/Okeanrst/FastCGIZF2Adapter",
     "authors": [
         {
             "name": "okeanrst",
