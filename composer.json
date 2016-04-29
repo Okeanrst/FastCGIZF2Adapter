@@ -13,7 +13,7 @@
     "require": {
 	"php": ">=5.5",
         "zendframework/zendframework": "~2.4",
-	"phpfastcgi/fastcgi-daemon": "^v0.8.0",
+	"phpfastcgi/fastcgi-daemon": "~v0.8.0",
         "paragonie/random_compat": "dev-master"
 	},
     "autoload": {
