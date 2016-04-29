@@ -109,11 +109,8 @@ class AppWrapper implements KernelInterface
         $finishRegisteredServices = $serviceManager->getRegisteredServices();
         
         foreach ($finishRegisteredServices['instances'] as $num => $name) {
-            if (!in_array($name, $services, true)) { 
-       
-                if (!array_key_exists($name, $this->startServicesInstances) ) {
-                    $serviceManager->unregisterService($name);                    
-                }
+            if (!array_key_exists($name, $this->startServicesInstances) ) {
+                $serviceManager->unregisterService($name);                    
             }
         }
         
