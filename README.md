@@ -11,7 +11,7 @@ Below is an example of FastCGI application based on Zend Framework 2.
 Install [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication).
 Add "PHPFastCGI Zend Framework 2 Adapter" to your application: 
  
-    php composer.phar require okeanrst/fastcgi-zf2-adapter:dev-master
+    php composer.phar require okeanrst/fastcgi-zf2-adapter
 
 Add in `public` directory below given file:
 
