@@ -77,11 +77,11 @@ Create a virtual host configuration file for your project under `/path/to/nginx/
 it should look something like below:
 
     upstream workers {
-    server localhost:5001;
-   #server localhost:5002;
-}
+        server localhost:5001;
+        #server localhost:5002;
+    }
 
-server {
+    server {
         listen 80;
         server_name fastcgi_zf2;
         root /var/www/FastCGIDaemonZF2/public;
@@ -102,8 +102,8 @@ server {
         internal;
     }
 
-    error_log /var/log/nginx/fastcgi_zf2_error.log;
-    access_log /var/log/nginx/fastcgi_zf2_access.log;
-}
+        error_log /var/log/nginx/fastcgi_zf2_error.log;
+        access_log /var/log/nginx/fastcgi_zf2_access.log;
+    }
 
 Restart the nginx, now you should be ready to go!
