@@ -1,6 +1,6 @@
 # PHPFastCGI Zend Framework 2 Adapter
 
-Experemental!!! First, the application shows a performance increase of 10 times . With the accumulation of the number of requests , the amount of RAM occupied by the application increases , increasing the response time.
+Experemental!!! First, the application shows 10-fold increase a performance. With the accumulation of the number of requests , the amount of RAM occupied by the application increases , increasing the response time.
 
 ## Introduction
 
