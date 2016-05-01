@@ -73,21 +73,21 @@ class AppWrapper implements KernelInterface
         $config = $serviceManager->get('config');
         $listenersFromConfigService = isset($config['listeners']) ? $config['listeners'] : [];
         $listeners = array_unique(array_merge($listenersFromConfigService, $listenersFromAppConfig));
-        
        
         $serverRequest = $request->getServerRequest();
         $request = Psr7ServerRequest::toZend($serverRequest);
 		
-		$serviceManager->setService('Request', $request);
+	$serviceManager->setService('Request', $request);
         
         $application = $serviceManager->get('Application');
-		$application->bootstrap($listeners);       
+	$application->bootstrap($listeners);       
         
-		ob_start();
-		$application->run();
-		$out = ob_get_contents();
-		ob_end_clean();       
-		$response = $application->getResponse();        
+	ob_start();
+	$application->run();
+	$out = ob_get_contents();
+	ob_end_clean();       
+	$response = $application->getResponse();        
+        $diactorosResponse = Psr7Response::fromZend($response);
         
         $sid = defined('SID') ? constant('SID') : false;
         if (session_status() == PHP_SESSION_ACTIVE || ($sid !== false && session_id())) {
@@ -117,9 +117,7 @@ class AppWrapper implements KernelInterface
         $serviceManager->unsetAbstractFactorys();
         foreach ($this->startAbstractFactorys as $key => $fab) {
             $serviceManager->addAbstractFactory($fab);
-        }        
-        
-		$diactorosResponse = Psr7Response::fromZend($response);
+        }
         //var_dump($out);
         return $diactorosResponse;
     }
