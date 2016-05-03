@@ -11,12 +11,12 @@ Add "PHPFastCGI Zend Framework 2 Adapter" to your application:
  
     php composer.phar require okeanrst/fastcgi-zf2-adapter
 
-Add in `public` directory below given file:
+Add in project directory below given file:
 
 ```php
-<?php // public/index_fcgi.php
+<?php // fcgi.php
 
-chdir(dirname(__DIR__));
+chdir(__DIR__);
 
 // Setup autoloading
 require_once 'vendor/autoload.php';
@@ -39,10 +39,6 @@ $consoleApplication = (new ApplicationFactory)->createApplication($kernel);
 
 // Run the symfony console application
 $consoleApplication->run();
-
-
-// Include the composer autoloader
-require_once dirname(__FILE__) . '/../vendor/autoload.php';
 ```
 
 ### Supervisor setup
@@ -51,7 +47,7 @@ To setup supervisor, open your `/path/to/supervisor.d/`, create, eg, program_fas
 the following:
 
     [program:fastcgi_zf2_1]
-    command=php /var/www/FastCGIDaemonZF2/public/index_fcgi.php run --port=5001 --host=localhost
+    command=php /var/www/FastCGIDaemonZF2/fcgi.php run --port=5001 --host=localhost
     autostart=true
     autorestart=true
     stderr_logfile=/var/log/supervisor/fastcgi_zf2_1.err.log
